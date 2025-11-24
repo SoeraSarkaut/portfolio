@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+* {
+  user-select: none;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-indicator {
+  animation: scrollIndicator 4s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+@keyframes scrollIndicator {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(48px);
+  }
+}
